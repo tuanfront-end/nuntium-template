@@ -3,18 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.1.0",
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/postcss7-compat": "^2.0.2",
-    "@tailwindcss/typography": "^0.4.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.53",
-    "@types/react-dom": "^16.9.8",
     "autoprefixer": "^9.8.6",
     "node-sass": "4.14.1",
     "postcss": "^7.0.35",
@@ -51,9 +39,19 @@
     ]
   },
   "devDependencies": {
+    "@craco/craco": "^6.1.0",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@tailwindcss/typography": "^0.4.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.7",
-    "@typescript-eslint/eslint-plugin": "^4.14.2",
-    "@typescript-eslint/parser": "^4.14.2",
-    "eslint-plugin-react": "^7.22.0"
+    "react-snap": "^1.23.0"
   }
 }

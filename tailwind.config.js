@@ -1,7 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  important: "#root",
+  important: "body",
   purge: {
     content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
     options: {
@@ -30,7 +30,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      display: ["Josefin Sans", "system-ui", "sans-serif"],
+      display: ["Open Sans", "system-ui", "sans-serif"],
       LineAwesome: ["Line Awesome Free", "system-ui", "sans-serif"],
     },
     colors: {
@@ -40,7 +40,7 @@ module.exports = {
       primary: "#EC6041",
       secondary: "#B3421A",
       black: "#121212",
-      white: "fff",
+      white: "#fff",
       status: {
         success: "#287D3C",
         warning: "#B95000",

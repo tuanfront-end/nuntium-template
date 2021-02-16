@@ -1,3 +1,11 @@
-.color {
-  color: aqua;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./typographys.scss";
+@import "./lineClamp";
+//
+.tnnc-grid-col-section-hero {
+  grid-template-columns: 5fr 0.5fr 5fr;
+  grid-template-rows: auto;
 }

@@ -2,21 +2,31 @@ import React from "react";
 
 export interface DropdownPanelProps {
   containerClassName?: string;
-  sizeClass?: string;
-  radius?: string;
-  position?: string;
+  popperPlacement?:
+    | "left-start"
+    | "left"
+    | "left-end"
+    | "top-start"
+    | "top"
+    | "top-end"
+    | "right-start"
+    | "right"
+    | "right-end"
+    | "bottom-start"
+    | "bottom"
+    | "bottom-end";
 }
 
 const DropdownPanel: React.FC<DropdownPanelProps> = ({
   children,
-  containerClassName = "shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50",
-  sizeClass = "w-56",
-  radius = "rounded-md",
-  position = "right-0 mt-2",
+  containerClassName = "",
+  popperPlacement = "bottom-start",
 }) => {
   return (
     <div
-      className={`wil-dropdown__panel hidden origin-top-right absolute ${position} ${containerClassName} ${sizeClass} ${radius}`}
+      className={`ttnc-dropdown__panel hidden shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 my-2 z-50 ${containerClassName}`}
+      style={{ minWidth: "12rem" }}
+      data-popper-placement={popperPlacement}
     >
       {children}
     </div>

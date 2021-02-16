@@ -2,24 +2,34 @@ import React, { FC } from "react";
 
 export interface SelectProps {
   containerClassName?: string;
-  selectedText?: string;
+  name: string;
+  label?: string;
 }
 
 const Select: FC<SelectProps> = ({
   containerClassName = "",
-  selectedText = "Recent Posts",
+  name,
+  label = "",
+  children,
 }) => {
   return (
-    <select
-      className={`wil-select truncate rounded-full bg-white dark:bg-gray-900 border border-white dark:border-gray-900 text-gray-900 dark:text-gray-100 font-medium text-xs md:text-base max-w-full pl-4 ${containerClassName}`}
-      name=""
-    >
-      <option value="1">{selectedText}</option>
-      <option value="1">Toom cook 1</option>
-      <option value="1">Toom cook 2</option>
-      <option value="1">Toom cook 3</option>
-      <option value="1">Toom cook 4</option>
-    </select>
+    <div className={containerClassName}>
+      {label && (
+        <label
+          htmlFor={name}
+          className="block text-paragraph-small text-black dark:text-white ml-4 mb-2"
+        >
+          {label}
+        </label>
+      )}
+      <select
+        name={name}
+        autoComplete={name}
+        className="block w-full py-2 px-4 border border-action-primary bg-white shadow-sm focus:outline-none focus:ring-action-primary focus:border-primary focus:ring-2 sm:text-sm"
+      >
+        {children}
+      </select>
+    </div>
   );
 };
 

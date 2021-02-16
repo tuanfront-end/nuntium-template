@@ -1,51 +1,37 @@
-import React, { FC, ReactNode } from "react";
-
+import React from "react";
 export interface InputProps {
   containerClassName?: string;
-  size?: string;
-  border?: string;
   placeholder?: string;
-  inputClassName?: string;
-  radius?: string;
-  iconEnable?: boolean;
-  nodeIcon?: ReactNode;
-  iconPosition?: "left" | "right";
+  label?: string;
+  name: string;
+  type?: string;
 }
-
-const Input: FC<InputProps> = ({
+const Input: React.FC<InputProps> = ({
   containerClassName = "",
-  size = "h-14 w-full",
-  border = "border-2 border-gray-300",
-  radius = "rounded-full",
+  name,
   placeholder = "",
-  inputClassName = "placeholder-gray-600 bg-transparent text-xs md:text-base",
-  nodeIcon,
-  iconEnable = true,
-  iconPosition = "left",
+  label = "",
+  type = "text",
 }) => {
   return (
-    <div className={`wil-input relative ${containerClassName} `}>
-      {iconEnable && (
-        <div
-          className={`absolute ${
-            iconPosition === "left" ? "left-1" : "right-1"
-          } top-1/2 transform -translate-y-1/2`}
+    <div className={containerClassName}>
+      {label && (
+        <label
+          htmlFor={name}
+          className="block text-paragraph-small text-black dark:text-white mb-2 ml-4"
         >
-          {nodeIcon || (
-            <div className="text-xl leading-none p-2">
-              <i className="las la-search"></i>
-            </div>
-          )}
-        </div>
+          {label}
+        </label>
       )}
-      <input
-        type="text"
-        aria-label={placeholder}
-        placeholder={placeholder}
-        className={` px-5 ${size} ${border} ${radius} ${inputClassName} ${
-          iconEnable ? (iconPosition === "left" ? "pl-14" : "pr-14") : ""
-        } focus:border-primary focus:ring-0 font-medium`}
-      />
+      <div className="flex shadow-sm">
+        <input
+          id={name}
+          type={type}
+          name={name}
+          className="focus:ring-action-primary focus:border-primary flex-1 block w-full sm:text-sm border-action-primary"
+          placeholder={placeholder}
+        />
+      </div>
     </div>
   );
 };

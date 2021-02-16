@@ -7,21 +7,20 @@ export interface NextPrevProps {
 const NextPrev: FC<NextPrevProps> = ({ btnClass = "" }) => {
   return (
     <div
-      className="glide__arrows inline-flex items-center justify-between bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-full text-xl md:text-2xl py-2 px-4 w-24 h-9 md:h-11"
+      className="inline-flex items-center text-white text-xl space-x-4"
       data-glide-el="controls"
     >
       <button
-        className={`${btnClass}-prev block disabled:text-gray-400`}
+        className={`${btnClass}-prev flex items-center justify-center h-11 w-11 rounded-full bg-primary`}
         data-glide-dir="<"
-        disabled
       >
-        <i className="las la-angle-left"></i>
+        <i className="las la-long-arrow-alt-left"></i>
       </button>
       <button
-        className={`${btnClass}-next block disabled:text-gray-400`}
+        className={`${btnClass}-next flex items-center justify-center h-11 w-11 rounded-full bg-primary `}
         data-glide-dir=">"
       >
-        <i className="las la-angle-right"></i>
+        <i className="las la-long-arrow-alt-right"></i>
       </button>
     </div>
   );

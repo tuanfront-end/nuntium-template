@@ -1,16 +1,10 @@
 const avatarImgs = [
   "https://randomuser.me/api/portraits/men/32.jpg",
-  "",
-  "",
   "https://randomuser.me/api/portraits/women/44.jpg",
   "https://randomuser.me/api/portraits/men/46.jpg",
-  "",
   "https://randomuser.me/api/portraits/men/97.jpg",
   "https://uifaces.co/our-content/donated/1H_7AxP0.jpg",
   "https://randomuser.me/api/portraits/women/9.jpg",
-  "",
-  "",
-  "",
   "https://images-na.ssl-images-amazon.com/images/M/MV5BYzg2NDY4MjAtZDBjNS00MGRhLWJkZDMtYWJkZDM1NWZiMzgyXkEyXkFqcGdeQXVyMTE1MzA3MTI@._V1_UX172_CR0,0,172,256_AL_.jpg",
   "https://uifaces.co/our-content/donated/VUMBKh1U.jpg",
 ];

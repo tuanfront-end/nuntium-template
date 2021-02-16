@@ -2,19 +2,33 @@ import React, { FC } from "react";
 
 export interface CheckboxProps {
   label?: string;
+  subLabel?: string;
+  name: string;
 }
 
-const Checkbox: FC<CheckboxProps> = ({ label = "Option 1" }) => {
+const Checkbox: FC<CheckboxProps> = ({ subLabel = "", label = "", name }) => {
   return (
-    <label className="flex items-center space-x-2 md:space-x-3 text-xs md:text-base">
-      <input
-        type="checkbox"
-        name="checked-demo"
-        value="1"
-        className="form-tick appearance-none h-5 md:h-6 w-5 md:w-6 border-2 border-gray-400 rounded-md checked:bg-quateary checked:border-quateary focus:outline-none focus:ring-quateary text-quateary"
-      />
-      <span className="text-gray-700">{label}</span>
-    </label>
+    <div className="flex items-start">
+      <div className="flex items-center h-5">
+        <input
+          id={name}
+          name={name}
+          type="checkbox"
+          className="focus:ring-action-primary h-4 w-4 text-primary border-primary"
+        />
+      </div>
+      {label && (
+        <div className="ml-3 text-sm">
+          <label
+            htmlFor={name}
+            className="text-paragraph-small text-black dark:text-white"
+          >
+            {label}
+          </label>
+          {subLabel && <p className="text-neutral-500">{subLabel}</p>}
+        </div>
+      )}
+    </div>
   );
 };
 

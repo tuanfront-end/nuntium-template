@@ -24,7 +24,7 @@ const SocialList: React.FC<SocialListProps> = ({
   data = DATA,
   containerClass = "",
   itemSize = "lg:w-11 w-8 lg:h-11 h-8",
-  itemClassName = "border-2 border-gray-300",
+  itemClassName = "border-2 border-neutral-300",
 }) => {
   return (
     <div className={`flex items-center flex-wrap space-x-2 ${containerClass}`}>

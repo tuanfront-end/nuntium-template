@@ -19,17 +19,17 @@ const Comment: FC<CommentProps> = ({
           <Avatar sizeClass={avatarSize} radius={avatarRadius} />
           <div>
             <a
-              className="block text-gray-900 dark:text-gray-100 text-body leading-tight"
+              className="block text-neutral-900 dark:text-neutral-100 text-body leading-tight"
               href="@@"
             >
               {_getPersonNameRd()}
             </a>
-            <span className="block text-gray-600 dark:text-gray-400 text-base leading-tight">
+            <span className="block text-neutral-600 dark:text-neutral-400 text-base leading-tight">
               2 days ago
             </span>
           </div>
         </div>
-        <div className="mb-10px text-base text-gray-700 dark:text-gray-300">
+        <div className="mb-10px text-base text-neutral-700 dark:text-neutral-300">
           <span>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente,
             id totam ipsa mollitia maiores repellendus, saepe eius modi deserunt
@@ -37,12 +37,12 @@ const Comment: FC<CommentProps> = ({
             fugiat neque sapiente?
           </span>
         </div>
-        <div className="text-xs font-medium text-gray-700 dark:text-gray-300 flex items-center leading-none">
+        <div className="text-xs font-medium text-neutral-700 dark:text-neutral-300 flex items-center leading-none">
           <i className="las la-thumbs-up text-body leading-none"></i>
           <span className="mr-10px  leading-none">20</span>
           <i className="las la-thumbs-down text-body  leading-none"></i>
           <span className="mr-5 leading-none">1</span>
-          <a href="##">Reply</a>
+          <a href="#root">Reply</a>
         </div>
 
         <div className="absolute right-0 top-0">
@@ -50,45 +50,21 @@ const Comment: FC<CommentProps> = ({
             <Dropdown.DropdownTrigger>
               <i className="text-2xl las la-ellipsis-h leading-none"></i>
             </Dropdown.DropdownTrigger>
-            <Dropdown.DropdownPanel
-              sizeClass="w-40 overflow-hidden"
-              radius="rounded-2.5xl"
-            >
-              <div
-                className="text-base text-gray-700 py-2 leading-tight"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="options-menu"
-              >
-                <a
-                  href="#@"
-                  className="block px-5 py-2 hover:bg-gray-300 "
-                  role="menuitem"
-                >
+            <Dropdown.DropdownPanel containerClassName="w-40 overflow-hidden rounded-2.5xl">
+              <div className="text-base text-neutral-700 py-2 leading-tight">
+                <a href="#@" className="block px-5 py-2 hover:bg-neutral-300 ">
                   <i className="text-body leading-none mr-2 las la-edit"></i>
                   Edit
                 </a>
-                <a
-                  href="#@"
-                  className="block px-5 py-2 hover:bg-gray-300 "
-                  role="menuitem"
-                >
+                <a href="#@" className="block px-5 py-2 hover:bg-neutral-300 ">
                   <i className="text-body leading-none mr-2 las la-reply"></i>
                   Reply
                 </a>
-                <a
-                  href="#@"
-                  className="block px-5 py-2 hover:bg-gray-300 "
-                  role="menuitem"
-                >
+                <a href="#@" className="block px-5 py-2 hover:bg-neutral-300 ">
                   <i className="text-body leading-none mr-2 las la-flag"></i>
                   Report
                 </a>
-                <a
-                  href="#@"
-                  className="block px-5 py-2 hover:bg-gray-300 "
-                  role="menuitem"
-                >
+                <a href="#@" className="block px-5 py-2 hover:bg-neutral-300 ">
                   <i className="text-body leading-none mr-2 las la-trash-alt"></i>
                   Delete
                 </a>

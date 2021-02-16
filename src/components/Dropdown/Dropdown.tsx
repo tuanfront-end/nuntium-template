@@ -11,7 +11,7 @@ interface DropdownPropsStatic {
 
 const Dropdown: FC<DropdownProps> & DropdownPropsStatic = ({ children }) => {
   return (
-    <div className="wil-dropdown relative inline-block text-left">
+    <div className="ttnc-dropdown relative inline-flex align-middle w-full">
       {children}
     </div>
   );
